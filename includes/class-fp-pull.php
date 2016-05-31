@@ -367,8 +367,8 @@ class FP_Pull {
 					// Todo: what if the post type does not support categories?
 					if ( ! empty( $post_categories ) ) {
 						$sanitized_post_categories = array_map( 'absint', $post_categories );
-
-						wp_set_object_terms( $new_post_id, apply_filters( 'fp_post_categories', $sanitized_post_categories ), 'category', $update );
+						$category_taxonomy = apply_filters( 'fp_post_categories_taxonomy', 'category' );
+						wp_set_object_terms( $new_post_id, apply_filters( 'fp_post_categories', $sanitized_post_categories ), $category_taxonomy, $update );
 					}
 
 					// Mark the post as syndicated
