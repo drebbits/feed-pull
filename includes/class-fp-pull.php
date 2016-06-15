@@ -142,7 +142,8 @@ class FP_Pull {
 
 		// Do nothing if feed pulling is not turned on
 		$option = fp_get_option();
-		if ( empty( $option['enable_feed_pull'] ) ) {
+		$do_pull = apply_filters( 'do_feed_pull', true, $source_feed_id );
+		if ( empty( $option['enable_feed_pull'] ) || ! $do_pull ) {
 			return;
 		}
 
