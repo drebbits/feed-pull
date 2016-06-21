@@ -162,6 +162,7 @@ class FP_Source_Feed_CPT {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			'menu_icon' => plugins_url( '/img/feed-document.png', dirname( __FILE__ ) ),
+			'menu_position' => apply_filters(  'fp_source_feed_cpt', 25 ),
 			'register_meta_box_cb' => array( $this, 'add_meta_boxes' ),
 			'supports' => array( 'title' )
 		);
