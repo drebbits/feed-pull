@@ -277,7 +277,7 @@ class FP_Source_Feed_CPT {
 			<input type="button" class="add-new button" value="<?php _e( 'Add Custom Namespace', 'feed-pull' ); ?>">
 		</p>
 
-		<script type="text/underscores" id='namespace-row-template'>
+		<script type="text/html" id='namespace-row-template'>
 			<tr data-namespace-row-id="{{ rowID }}">
 				<td>
 					<input type="text" name="fp_custom_namespaces[{{ rowID }}][namespace_prefix]" value="{{ namespace_prefix }}">
@@ -452,7 +452,7 @@ class FP_Source_Feed_CPT {
 			</tbody>
 		</table>
 
-		<script type="text/underscores" id='mapping-row-template'>
+		<script type="text/html" id='mapping-row-template'>
 			<tr data-mapping-row-id="{{ rowID }}">
 				<td>
 					<input type="text" name="fp_field_map[{{ rowID }}][source_field]" value="">
